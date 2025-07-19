@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>لوحة المسؤول - SpeedX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- زر تسجيل الخروج -->
+  <script>
+    function logout() {
+      localStorage.removeItem("loggedUser");
+      window.location.href = "login.html";
+    }
+  </script>
+
+  <!-- شريط التنقل -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">SpeedX - Admin</div>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="plans.html">الباقات</a></li>
+        <li><a href="subscribe.html">الاشتراك</a></li>
+        <li><a href="support.html">الدعم</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="#" onclick="logout()">تسجيل الخروج</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- الهيدر -->
+  <section class="hero">
+    <h1>لوحة تحكم المسؤول</h1>
+    <p>مرحباً بك، Admin. لديك صلاحية كاملة لإدارة المشتركين.</p>
+  </section>
+
+  <!-- أدوات المسؤول -->
+  <section class="features-grid">
+    <div class="feature-card">
+      <h3>📋 قائمة المشتركين</h3>
+      <p><a href="users.html">عرض / تعديل المشتركين</a></p>
+    </div>
+    <div class="feature-card">
+      <h3>🖨️ طباعة بيانات مشترك</h3>
+      <p><a href="print-user.html">نموذج الطباعة</a></p>
+    </div>
+    <div class="feature-card">
+      <h3>📂 إدارة الاشتراكات</h3>
+      <p><a href="subscribe.html">طلبات الاشتراك الجديدة</a></p>
+    </div>
+    <div class="feature-card">
+      <h3>⚙️ إدارة الباقات</h3>
+      <p><a href="plans.html">تحديث خطط الإنترنت</a></p>
+    </div>
+    <div class="feature-card">
+      <h3>💬 الدعم الفني</h3>
+      <p><a href="support.html">الرد على طلبات الدعم</a></p>
+    </div>
+    <div class="feature-card">
+      <h3>📥 رسائل اتصل بنا</h3>
+      <p><a href="contact.html">مراجعة الرسائل الواردة</a></p>
+    </div>
+  </section>
+
+  <!-- زر الرجوع -->
+  <button class="back-button" onclick="window.location.href='index.html'">العودة إلى الرئيسية</button>
+
+  <!-- الفوتر -->
+  <footer class="footer">
+    <div class="footer-logo">SpeedX</div>
+    <p>© 2025 جميع الحقوق محفوظة</p>
+    <div class="footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="plans.html">الباقات</a>
+      <a href="subscribe.html">الاشتراك</a>
+      <a href="support.html">الدعم</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+  </footer>
+
+</body>
+</html>

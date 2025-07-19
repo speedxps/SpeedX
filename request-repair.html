@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>طلب صيانة - SpeedX</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">SpeedX</div>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="plans.html">الباقات</a></li>
+        <li><a href="about.html">من نحن</a></li>
+        <li><a href="support.html">الدعم</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="login.html">تسجيل الدخول</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero enhanced-hero">
+    <div class="container">
+      <h1>🔧 نموذج طلب صيانة</h1>
+      <p>املأ النموذج أدناه وسيتم التواصل معك من قبل فريق الدعم خلال وقت قصير</p>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <form class="request-form">
+
+      <label>الاسم الكامل:</label>
+      <input type="text" placeholder="مثال: رنين أحمد" required />
+
+      <label>رقم الهاتف:</label>
+      <input type="tel" placeholder="059xxxxxxxx" required />
+
+      <label>المنطقة:</label>
+      <select required>
+        <option disabled selected>اختر المنطقة</option>
+        <option>رام الله</option>
+        <option>نابلس</option>
+        <option>الخليل</option>
+        <option>القدس</option>
+        <option>غزة</option>
+        <option>مناطق أخرى</option>
+      </select>
+
+      <label>نوع المشكلة:</label>
+      <select required>
+        <option disabled selected>اختر نوع العطل</option>
+        <option>انقطاع كامل</option>
+        <option>ضعف في الإشارة</option>
+        <option>بطء في التحميل</option>
+        <option>عدم استقرار الاتصال</option>
+        <option>مشكلة أخرى</option>
+      </select>
+
+      <label>تفاصيل إضافية:</label>
+      <textarea rows="4" placeholder="يرجى توضيح المشكلة بدقة..."></textarea>
+
+      <button type="submit" class="btn">📨 إرسال الطلب</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">SpeedX</div>
+      <p>© 2025 SpeedX Internet. جميع الحقوق محفوظة.</p>
+      <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="plans.html">الباقات</a>
+        <a href="about.html">من نحن</a>
+        <a href="support.html">الدعم</a>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="login.html">تسجيل الدخول</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

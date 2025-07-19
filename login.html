@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>تسجيل الدخول - SpeedX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">SpeedX</div>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="plans.html">الباقات</a></li>
+        <li><a href="subscribe.html">الاشتراك</a></li>
+        <li><a href="support.html">الدعم</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="login.html">تسجيل الدخول</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <form onsubmit="return loginUser()">
+    <h2>تسجيل الدخول</h2>
+
+    <label for="username">اسم المستخدم:</label>
+    <input type="text" id="username" required>
+
+    <label for="password">كلمة المرور:</label>
+    <input type="password" id="password" required>
+
+    <input type="submit" value="تسجيل الدخول">
+  </form>
+
+  <button class="back-button" onclick="window.location.href='index.html'">العودة إلى الرئيسية</button>
+
+  <script>
+    const users = {
+      admin: "123",
+      noor: "noor", ahmad: "ahmad", leila: "leila", khaled: "khaled", sara: "sara", mahmoud: "mahmoud",
+      rana: "rana", hassan: "hassan", doa: "doa", abdullah: "abdullah", narmeen: "narmeen", ali: "ali",
+      fatima: "fatima", tareq: "tareq", eman: "eman", basem: "basem", mai: "mai", jameel: "jameel",
+      huda: "huda", raed: "raed", abeir: "abeir", haitham: "haitham", maram: "maram", zyad: "zyad",
+      samar: "samar", adel: "adel", mona: "mona", yaser: "yaser", rahaf: "rahaf", kamal: "kamal",
+      klood: "klood", sami: "sami", batool: "batool", naser: "naser", jamila: "jamila", hussein: "hussein",
+      malak: "malak", mazen: "mazen", nasreen: "nasreen", rami: "rami", jory: "jory", feras: "feras",
+      shahd: "shahd", waleed: "waleed", aya: "aya", khalil: "khalil", motaz: "motaz", nawal: "nawal",
+      layan: "layan", raghad: "raghad", sayf: "sayf", basma: "basma", rayan: "rayan", noha: "noha",
+      tamer: "tamer", arwa: "arwa", jood: "jood", yazan: "yazan", safaa: "safaa", bilal: "bilal",
+      najla: "najla", ammar: "ammar", khaldoun: "khaldoun", soha: "soha", adnan: "adnan", mayar: "mayar",
+      fadi: "fadi", jana: "jana", diya: "diya", tahani: "tahani", adam: "adam", mais: "mais", di: "di",
+      basel: "basel", ruba: "ruba", jihad: "jihad", bayan: "bayan", qais: "qais", baysan: "baysan",
+      nawar: "nawar", ilham: "ilham", baha: "baha", karam: "karam", roula: "roula", sanad: "sanad",
+      misaa: "misaa", ibrahim: "ibrahim", jamal: "jamal", farah: "farah", abdulrahman: "abdulrahman",
+      amnah: "amnah", deema: "deema", anas: "anas", nader: "nader", raghda: "raghda", moan: "moan",
+      shatha: "shatha", marwan: "marwan"
+    };
+
+    function loginUser() {
+      const username = document.getElementById("username").value.trim().toLowerCase();
+      const password = document.getElementById("password").value.trim();
+
+      if (users[username] && users[username] === password) {
+        localStorage.setItem("loggedUser", username);
+        if (username === "admin") {
+          window.location.href = "admin.html";
+        } else {
+          window.location.href = "dashboard.html";
+        }
+      } else {
+        alert("اسم المستخدم أو كلمة المرور غير صحيحة");
+      }
+
+      return false;
+    }
+  </script>
+
+  <footer class="footer">
+    <div class="footer-logo">SpeedX</div>
+    <p>© 2025 جميع الحقوق محفوظة</p>
+    <div class="footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="plans.html">الباقات</a>
+      <a href="subscribe.html">الاشتراك</a>
+      <a href="support.html">الدعم</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+  </footer>
+
+</body>
+</html>

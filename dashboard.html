@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>لوحة التحكم - SpeedX</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">SpeedX</div>
+      <ul class="nav-links">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="plans.html">الباقات</a></li>
+        <li><a href="subscribe.html">الاشتراك</a></li>
+        <li><a href="support.html">الدعم</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="#" onclick="logout()">تسجيل الخروج</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <h1 id="welcome">أهلاً بك، </h1>
+    <p>مرحبًا بك في لوحة التحكم الخاصة بك كمشترك في SpeedX.</p>
+  </section>
+
+  <section class="features-grid" id="userData">
+    <!-- يتم تعبئة بيانات المستخدم هنا تلقائيًا -->
+  </section>
+
+  <section class="btn-center">
+    <button onclick="location.href='request-router.html'">🔌 طلب راوتر جديد</button>
+    <button onclick="location.href='request-upgrade.html'">🚀 طلب رفع سرعة</button>
+    <button onclick="location.href='request-move.html'">📦 طلب نقل موقع</button>
+    <button onclick="location.href='request-maintenance.html'">🛠️ تقديم طلب عطل</button>
+  </section>
+
+  <button class="back-button" onclick="window.location.href='index.html'">العودة إلى الرئيسية</button>
+
+  <footer class="footer">
+    <div class="footer-logo">SpeedX</div>
+    <p>© 2025 جميع الحقوق محفوظة</p>
+    <div class="footer-links">
+      <a href="index.html">الرئيسية</a>
+      <a href="plans.html">الباقات</a>
+      <a href="subscribe.html">الاشتراك</a>
+      <a href="support.html">الدعم</a>
+      <a href="contact.html">اتصل بنا</a>
+    </div>
+  </footer>
+
+  <script>
+    const userDetails = {
+      noor: { name: "نور", phone: "0599123001", area: "نابلس", plan: "60 ميجا", start: "2025-07-01", end: "2025-08-01" },
+      ahmad: { name: "أحمد", phone: "0599123002", area: "رام الله", plan: "30 ميجا", start: "2025-07-02", end: "2025-08-02" },
+      leila: { name: "ليلى", phone: "0599123003", area: "جنين", plan: "100 ميجا", start: "2025-07-03", end: "2025-08-03" },
+      khaled: { name: "خالد", phone: "0599123004", area: "طولكرم", plan: "60 ميجا", start: "2025-07-04", end: "2025-08-04" },
+      sara: { name: "سارة", phone: "0599123005", area: "قلقيلية", plan: "30 ميجا", start: "2025-07-05", end: "2025-08-05" },
+      mahmoud: { name: "محمود", phone: "0599123006", area: "سلفيت", plan: "60 ميجا", start: "2025-07-06", end: "2025-08-06" },
+      // أضف باقي الـ 100 مشترك بنفس التنسيق...
+    };
+
+    function logout() {
+      localStorage.removeItem("loggedUser");
+      window.location.href = "login.html";
+    }
+
+    window.onload = function () {
+      const user = localStorage.getItem("loggedUser");
+      if (!user || !userDetails[user]) {
+        alert("يرجى تسجيل الدخول أولاً");
+        window.location.href = "login.html";
+        return;
+      }
+
+      const info = userDetails[user];
+
+      document.getElementById("welcome").textContent = `أهلاً بك، ${info.name}`;
+
+      document.getElementById("userData").innerHTML = `
+        <div class="feature-card"><h3>اسم المشترك</h3><p>${info.name}</p></div>
+        <div class="feature-card"><h3>رقم الهاتف</h3><p>${info.phone}</p></div>
+        <div class="feature-card"><h3>المنطقة</h3><p>${info.area}</p></div>
+        <div class="feature-card"><h3>الباقة</h3><p>${info.plan}</p></div>
+        <div class="feature-card"><h3>تاريخ الاشتراك</h3><p>${info.start}</p></div>
+        <div class="feature-card"><h3>انتهاء الاشتراك</h3><p>${info.end}</p></div>
+      `;
+    }
+  </script>
+
+</body>
+</html>

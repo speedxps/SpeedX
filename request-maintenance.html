@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>طلب صيانة - SpeedX</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">SpeedX</div>
+    <ul class="nav-links">
+      <li><a href="index.html">الرئيسية</a></li>
+      <li><a href="plans.html">الباقات</a></li>
+      <li><a href="dashboard.html">لوحة التحكم</a></li>
+      <li><a href="support.html">الدعم</a></li>
+      <li><a href="login.html">تسجيل الدخول</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <h1>طلب صيانة</h1>
+    <p>املأ النموذج أدناه وسنقوم بإرسال فني بأسرع وقت ممكن.</p>
+  </div>
+</header>
+
+<section class="form-section">
+  <form class="request-form">
+    <label for="username">اسم المستخدم:</label>
+    <input type="text" id="username" required>
+
+    <label for="phone">رقم الهاتف:</label>
+    <input type="tel" id="phone" required>
+
+    <label for="problem">وصف المشكلة:</label>
+    <textarea id="problem" rows="5" placeholder="يرجى شرح المشكلة بشكل مختصر..." required></textarea>
+
+    <label for="urgency">درجة الأهمية:</label>
+    <select id="urgency" required>
+      <option value="">-- اختر --</option>
+      <option>عادية</option>
+      <option>متوسطة</option>
+      <option>عاجلة</option>
+    </select>
+
+    <button type="submit" class="btn">إرسال الطلب</button>
+  </form>
+</section>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-logo">SpeedX</div>
+    <p>© 2025 SpeedX Internet. جميع الحقوق محفوظة.</p>
+  </div>
+</footer>
+</body>
+</html>

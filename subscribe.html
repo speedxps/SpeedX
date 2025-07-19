@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>نموذج الاشتراك - SpeedX</title>
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    function printPage() {
+      window.print();
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="logo">SpeedX</div>
+      <ul class="nav-links center-nav">
+        <li><a href="index.html">الرئيسية</a></li>
+        <li><a href="plans.html">الباقات</a></li>
+        <li><a href="subscribe.html">الاشتراك</a></li>
+        <li><a href="support.html">الدعم</a></li>
+        <li><a href="contact.html">اتصل بنا</a></li>
+        <li><a href="login.html">تسجيل الدخول</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container">
+      <h1>نموذج الاشتراك</h1>
+      <p>يرجى تعبئة البيانات للاشتراك في الخدمة</p>
+    </div>
+  </header>
+
+  <section class="form-section">
+    <form class="form-box">
+      <label>الاسم الكامل</label>
+      <input type="text" required />
+
+      <label>رقم الهاتف</label>
+      <input type="tel" required />
+
+      <label>العنوان</label>
+      <input type="text" required />
+
+      <label>الباقة المطلوبة</label>
+      <select required>
+        <option value="">-- اختر باقة --</option>
+        <option>SpeedX Basic - 60 شيكل</option>
+        <option>SpeedX Plus - 100 شيكل</option>
+        <option>SpeedX Max - 140 شيكل</option>
+      </select>
+
+      <label>مدة الاشتراك</label>
+      <select required>
+        <option>شهري</option>
+        <option>3 شهور</option>
+        <option>6 شهور</option>
+        <option>سنة</option>
+      </select>
+
+   
+
+      <button type="submit">إرسال</button>
+      <button type="button" onclick="printPage()">📄 طباعة PDF</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">SpeedX</div>
+      <p>© 2025 SpeedX Internet. جميع الحقوق محفوظة.</p>
+      <div class="footer-links">
+        <a href="index.html">الرئيسية</a>
+        <a href="plans.html">الباقات</a>
+        <a href="subscribe.html">الاشتراك</a>
+        <a href="support.html">الدعم</a>
+        <a href="contact.html">اتصل بنا</a>
+        <a href="login.html">تسجيل الدخول</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
